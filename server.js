@@ -8,9 +8,8 @@ const stripe = require('stripe');
 dotenv.config();
 const app = express();
 
-// CORS Settings
 app.use(cors({
-  origin: "*", // Sab se asan hal deployment ke waqt
+  origin: process.env.CLIENT_URL || "https://softy3.vercel.app", 
   credentials: true
 }));
 
