@@ -4,7 +4,6 @@ import { FiPlus, FiMinus, FiTruck, FiShield, FiArrowLeft } from "react-icons/fi"
 import { AiFillStar } from "react-icons/ai";
 import { useCart } from "../context/CartContext"; // ✅ Step 1: Context Import
 import "./ProductDetail.css";
-import { motion } from "framer-motion";
 import skin from "../assets/skin.webp";
 import seoul from "../assets/seoul.webp";
 import round from "../assets/round.webp";
