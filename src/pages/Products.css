@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+.productsPage {
+  padding-top: 140px;
+  background: #ffffff;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.luxuryContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 50px;
+  color: #999;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.breadcrumb .sep { color: #ddd; }
+
+/* Layout Grid */
+.productsLayout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 80px;
+}
+
+/* Sidebar Styling */
+.filterSidebar {
+  position: sticky;
+  top: 140px;
+  height: fit-content;
+}
+
+.sidebarTitleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #000;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.sidebarTitleSection h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  font-size: 10px;
+  text-decoration: underline;
+  color: #888;
+  cursor: pointer;
+}
+
+.categoryList { list-style: none; padding: 0; }
+
+.categoryList li {
+  font-size: 14px;
+  padding: 12px 0;
+  color: #777;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.categoryList li:hover, .activeCat {
+  color: #000;
+  padding-left: 15px;
+}
+
+.categoryList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.categoryList li:hover::before, .activeCat::before { width: 10px; }
+
+/* Grid Header */
+.gridHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.collectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  font-style: italic;
+  margin: 0;
+}
+
+.stockCount {
+  font-size: 12px;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Luxury Card Grid */
+.luxuryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 70px 40px;
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: #f9f9f9;
+  overflow: hidden;
+  display: block;
+}
+
+.stockImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.stockCard:hover .stockImg {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+}
+
+.viewAction {
+  background: #fff;
+  padding: 15px 35px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.stockCard:hover .imageOverlay { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(4px); }
+.stockCard:hover .viewAction { opacity: 1; transform: translateY(0); }
+
+/* Stock Details Styling */
+.stockInfo {
+  padding: 25px 5px 0;
+}
+
+.brandLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #aaa;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.itemTitle {
+  font-size: 19px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.infoBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.minimalBagBtn {
+  background: none;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.minimalBagBtn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .productsLayout { grid-template-columns: 1fr; gap: 40px; }
+  .collectionTitle { font-size: 2.5rem; }
+  .filterSidebar { position: relative; top: 0; width: 100%; }
+}

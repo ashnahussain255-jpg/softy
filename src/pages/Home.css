@@ -1,0 +1,1057 @@
+/* =========================
+   HERO SECTION (PREMIUM PRO)
+========================= */
+.hero {
+  height: 95vh;
+  background:
+    linear-gradient(120deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("../assets/banner.jpeg") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* SOFT DARK OVERLAY FOR READABILITY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* GLOW EFFECT (REFINED) */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 255, 200, 0.15), transparent 70%);
+  top: -150px;
+  left: -150px;
+  filter: blur(90px);
+  z-index: 1;
+}
+
+/* HERO CONTENT */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.heroContent h1 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.heroContent p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  margin: 15px 0 25px;
+}
+
+/* BUTTON (PREMIUM LOOK) */
+.btn {
+  padding: 14px 34px;
+  background: linear-gradient(135deg, #eaedec, #b9bec0);
+  color: #000;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0,255,200,0.25);
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,255,200,0.4);
+}
+
+/* =========================
+   TOP BANNER
+========================= */
+.topBanner {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   SALE BANNER
+========================= */
+.saleBanner {
+  background: linear-gradient(90deg, #ff3d3d, #ffb300);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.saleBanner h2 {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+/* =========================
+   CATEGORY GRID
+========================= */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cat {
+  background: #0f0f0f;
+  color: white;
+  padding: 28px;
+  border-radius: 16px;
+  width: 190px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cat:hover {
+  transform: translateY(-6px);
+  background: #1a1a1a;
+  border-color: rgba(0,255,200,0.3);
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 40px;
+}
+
+/* PRODUCT CARD (PREMIUM) */
+.productCard {
+  background: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+  transition: all 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+.productCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.productCard h3 {
+  font-size: 18px;
+  margin: 12px 0 6px;
+}
+
+.productCard p {
+  font-weight: 700;
+  color: #111;
+}
+
+/* BUTTON */
+.productCard button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  background: linear-gradient(135deg, #000, #333);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.productCard button:hover {
+  background: #111;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 0;
+}
+
+/* VIEWPORT */
+.slider {
+  position: relative;
+  width: 340px;
+  height: 420px;
+  perspective: 1200px;
+  overflow: visible;
+}
+
+/* CARD BASE */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.3, 1);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* IMAGE */
+.slide img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
+/* ACTIVE CENTER */
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0) scale(1.15) rotateY(0deg);
+  z-index: 3;
+}
+
+/* LEFT SIDE */
+.lastSlide {
+  opacity: 0.4;
+  transform: translateX(-120%) scale(0.9) rotateY(25deg);
+  filter: blur(1px);
+  z-index: 1;
+}
+
+/* RIGHT SIDE */
+.nextSlide {
+  opacity: 0.4;
+  transform: translateX(120%) scale(0.9) rotateY(-25deg);
+  filter: blur(1px);
+  z-index: 1;
+}
+
+/* ARROWS */
+.arrow {
+  background: linear-gradient(135deg, #000, #333);
+  color: rgb(112, 109, 109);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: 0.3s;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+/* BUTTON (ADD TO CART) */
+.slide button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #1e1f20, #41464d);
+  color: white;
+  font-weight: 600;
+
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.25);
+}
+
+.slide button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 114, 255, 0.35);
+}
+/* Promo Section Styling - Updated for Professional Look */
+.promoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: stretch; /* Content ko poori width par phelane ke liye */
+  background-color: #f3f3f1; /* Rhode's signature off-white */
+  width: 100%;
+  min-height: 600px; /* Thori height barha dein professional lagta hai */
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.promoText {
+  flex: 1;
+  padding: 0 8% 0 10%; /* Left side se zyada space taake balanced lage */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promoTitle {
+  font-family: 'Times New Roman', serif; /* Serif font for expensive look */
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive font size */
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: lowercase; 
+  letter-spacing: -1px;
+}
+
+.promoDesc {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  max-width: 400px; /* Text ko bohot lamba mat hone dein */
+  margin-bottom: 25px;
+}
+
+.promoBtn {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 30px;
+  border: 1px solid #333;
+  border-radius: 50px; 
+  text-decoration: none;
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.promoBtn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.promoImage {
+  flex: 1.2; /* Image ko text se thora bara rakhein */
+  height: 600px; /* Container ke barabar */
+  background-color: #e9e9e7; /* Image area ko halka sa diff background dein */
+}
+
+.promoImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Yeh sab se important hai professional look ke liye */
+  display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .promoContainer {
+    flex-direction: column-reverse; 
+    min-height: auto;
+  }
+  
+  .promoText {
+    padding: 40px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .promoImage {
+    width: 100%;
+    height: 350px;
+  }
+}
+/* Section Header Styling */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  color: #888;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-family: 'serif'; /* Playfair Display or Times New Roman */
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #333;
+}
+
+/* Product Grid */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 10%;
+}
+
+.productCard {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.imgContainer {
+  position: relative;
+  background-color: #f7f7f7;
+  aspect-ratio: 4 / 5; /* Professional portrait ratio */
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.productCard:hover img {
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Hidden Quick Add Button */
+.quickAdd {
+  position: absolute;
+  bottom: -50px; /* Shuru mein neechay huga */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: white;
+  border: none;
+  padding: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.productCard:hover .quickAdd {
+  bottom: 15px; /* Hover par upar ayega */
+}
+
+/* Text Info */
+.productTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin: 5px 0;
+}
+
+.productPrice {
+  color: #777;
+  font-size: 0.9rem;
+}
+.sliderSection {
+  background-color: #fdfdfb; /* Bohat halka off-white */
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+  position: relative;
+}
+
+.slider {
+  width: 350px;
+  height: 480px;
+  position: relative;
+  perspective: 1500px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 15px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.slideImgBox {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.slideImgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Position States */
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotateY(0);
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.lastSlide {
+  opacity: 0.4;
+  transform: translateX(-80%) scale(0.8) rotateY(20deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.nextSlide {
+  opacity: 0.4;
+  transform: translateX(80%) scale(0.8) rotateY(-20deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Minimal Arrows */
+.arrow {
+  background: white;
+  border: 1px solid #eee;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 20;
+}
+
+.arrow.prev { left: 15%; }
+.arrow.next { right: 15%; }
+
+.arrow:hover {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+
+.slideBtn {
+  margin-top: auto;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #333;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slideBtn:hover {
+  background: #000;
+  color: #fff;
+}
+/* =========================
+   PHILOSOPHY SECTION
+========================= */
+.philosophySection {
+  background-color: #f3f3f1; /* Wahi off-white jo Rhode promo mein hai */
+  padding: 120px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.philosophyContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.philosophyTitle {
+  font-family: var(--serif-font); /* Times New Roman / Serif */
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 20px 0;
+  color: #222;
+}
+
+.philosophyDesc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #444;
+}
+
+/* =========================
+   MINIMAL FOOTER
+========================= */
+.footer {
+  background: white;
+  padding: 80px 10% 40px;
+  border-top: 1px solid #eee;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.footerBrand h3 {
+  font-family: var(--serif-font);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #000;
+  padding-left: 5px;
+}
+
+.newsletter p {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.inputBox {
+  display: flex;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.inputBox input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+.inputBox button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .inputBox {
+    justify-content: center;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 3-Bars (Hamburger) Styling */
+.hamburgerIcon {
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px; /* Hover area barhane ke liye */
+}
+
+.hamburgerIcon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: 0.3s;
+}
+
+/* Mega Menu Position Fix */
+.menuTrigger {
+  position: relative;
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%; /* Hamburger ke theek neechay */
+  left: 0;
+  background: white;
+  width: 600px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+  display: block;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.megaMenuGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.menuColumn h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #888;
+}
+
+.menuColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menuColumn li {
+  margin-bottom: 10px;
+}
+
+.menuColumn a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.menuColumn a:hover {
+  opacity: 0.5;
+}
+/* NAVBAR CONTAINER */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LEFT SIDE (Hamburger) */
+.navLeft {
+  flex: 1; /* Equal space distribution */
+  display: flex;
+  align-items: center;
+}
+
+/* CENTER LOGO */
+.navLogo {
+  flex: 2; /* Logo takes more space to stay centered */
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+/* RIGHT SIDE (Shop & Cart) */
+.navRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  opacity: 0.6;
+}
+
+/* SPECIFIC CART STYLING */
+.navLink[href="/cart"] {
+  background: #f6f5f1; /* Soft cream background for cart */
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* HAMBURGER ICON REFINEMENT */
+.hamburgerIcon {
+  width: 22px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburgerIcon span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #1a1a1a;
+}
+
+/* MEGA MENU POSITIONING */
+.megaMenu {
+  position: absolute;
+  top: 80px; /* Navbar height ke barabar */
+  left: 5%;
+  background: white;
+  width: 700px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  border: 1px solid #f9f9f9;
+  z-index: 1100;
+}
+.slideBtnLink {
+  margin-top: 20px;
+  padding: 12px 40px;
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.slideBtnLink:hover {
+  background: transparent;
+  color: #1a1a1a;
+  outline: 1px solid #1a1a1a;
+}
+/* Video Container */
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 65vh; /* Thori si height barhai hai for better impact */
+  overflow: hidden;
+  background: #fff;
+}
+
+.mainVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* White Tint Overlay (Professional Look) */
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Light white gradient to make text readable and look premium */
+  background: linear-gradient(
+    75deg, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  padding-left: 8%; /* Side spacing */
+}
+
+.videoOverlay h2 {
+  color: #222; /* Dark text on white tint */
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem); /* Mobile par chota hojayega automatically */
+  line-height: 1.2;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+/* Feedback / Review Section Below Video */
+.feedbackSection {
+  background: #fdfdfd;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.feedbackContent h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: #d4af37; /* Gold color for stars */
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.reviewText {
+  font-style: italic;
+  color: #666;
+  line-height: 1.8; /* Reading ke liye behtar hai */
+  letter-spacing: 0.5px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+/* =========================
+   ULTRA-LUXURY ANIMATED DIVIDERS
+========================= */
+
+.sectionDivider {
+  width: 70%; /* Thoda chota width zyada elegant lagta hai */
+  height: 1px; /* Super thin for high-end feel */
+  margin: 100px auto; /* Zyada whitespace = Zyada Luxury */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 175, 55, 0.3), /* Subtle Gold */
+    transparent
+  );
+}
+
+/* THE ELEGANT SHINE */
+.sectionDivider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.6), /* Pure white soft light */
+    transparent
+  );
+  /* Slow motion shine for premium feel */
+  animation: luxuryShine 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* KEYFRAMES */
+@keyframes luxuryShine {
+  0% { left: -100%; }
+  30% { left: 150%; } /* Shine jaldi guzar jaye aur phir pause lage */
+  100% { left: 150%; }
+}
+
+/* SOFT GLOW EFFECT */
+.sectionDivider {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+/* SILVER / PLATINUM VARIATION */
+.sectionDivider.silver {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(180, 180, 180, 0.4),
+    transparent
+  );
+  box-shadow: 0 0 15px rgba(180, 180, 180, 0.1);
+}
