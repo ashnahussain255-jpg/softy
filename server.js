@@ -70,15 +70,11 @@ app.post('/api/payment/checkout', async (req, res) => {
       quantity: item.qty,
     }));
 
-    const session = await stripeClient.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items,
-      mode: 'payment',
-      success_url: `http://localhost:3001/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:3001/checkout`,
-      customer_email: customerInfo.email,
-      shipping_address_collection: { allowed_countries: ['PK'] },
-    });
+ const session = await stripeClient.checkout.sessions.create({
+  // ... baaki code
+  success_url: `https://softy3.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`,
+  cancel_url: `https://softy3.vercel.app/checkout`,
+});
 
     const newOrder = new Order({
       customer: customerInfo,
